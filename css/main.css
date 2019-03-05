@@ -27,7 +27,7 @@ body {
 .tabs {
   zoom: 1;
   position: relative;
-  width: 978px;
+  width: 297px;
   height: 100%;
   margin: 0 auto;
   border: 0.05px solid #fff;
@@ -51,6 +51,9 @@ body {
   border: 1px solid #fff;
   background-color: #E5E5E5;
 }
+.tabs h1 .fas.fa-caret-up {
+  display: initial;
+}
 .tabs ul {
   zoom: 1;
   position: relative;
@@ -60,7 +63,7 @@ body {
   min-height: 100%;
   display: none;
   text-align: center;
-  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url("../assets/img.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.78)), url("../assets/img.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -72,29 +75,26 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
 }
-
-.tabs ul:after,
-.tabs ul:before {
-  content: "";
-  display: table;
-}
-
-.tabs ul:after {
-  clear: both;
-}
-
-.tabs ul li {
-  list-style: none;
-}
-
 .tabs .active {
   cursor: default;
   background: #CBCBCB;
 }
 
+.tabs ul:after, .tabs ul::before {
+  content: "";
+  display: table;
+}
+.tabs ul::after {
+  clear: both;
+}
+.tabs ul li {
+  list-style: none;
+}
+
 @media screen and (min-width: 880px) {
   .tabs {
     margin: 0 auto;
+    width: 978px;
   }
   .tabs ul {
     margin: 0;
@@ -109,6 +109,9 @@ body {
   }
   .tabs h1 {
     width: 180px;
+  }
+  .tabs h1 .fas.fa-caret-up {
+    display: none;
   }
 }
 .tabs .active + ul {

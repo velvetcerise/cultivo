@@ -37,7 +37,7 @@ html {
 .tabs {
     zoom: 1;
     position: relative;
-    width: 978px;
+    width: 297px;
     height: 100%;
     margin: 0 auto; 
     border: 0.05px solid $color-white;
@@ -64,6 +64,10 @@ html {
         cursor: pointer;
         border: 1px solid $color-white;
         background-color: $color-gray-light-1;
+
+        .fas.fa-caret-up {
+            display: initial;
+        }
     }
 
     ul {
@@ -77,8 +81,8 @@ html {
         text-align: center;
         background: 
             linear-gradient(
-                rgba(255, 255, 255, 0.75),
-                rgba(255, 255, 255, 0.75)
+                rgba(255, 255, 255, 0.78),
+                rgba(255, 255, 255, 0.78)
                 ),
             url('../assets/img.png');
         background-repeat: no-repeat;
@@ -94,40 +98,37 @@ html {
             letter-spacing: 0.05rem;
         }
     }
+
+
+
+    .active {
+        cursor: default;
+        background: $color-gray-dark; 
+    }
 }   
 
 
+.tabs ul {
+    &:after, &::before {
+        content: "";
+        display: table;
+    }
 
+    &::after {
+        clear: both;
+    }
 
-
-.tabs ul:after,
-.tabs ul:before {
-    content: "";
-    display: table;
-}  
-
-.tabs ul:after {
-    clear: both;
-
-}
-
-.tabs ul li {
-    list-style: none;
+    li {
+        list-style: none;
+    }
 }
 
 
-
-
-
-
-.tabs .active {
-    cursor: default;
-    background: $color-gray-dark; 
-}
 
 @media screen and (min-width: 880px) {
     .tabs {
-        margin: 0 auto; 
+        margin: 0 auto;
+        width: 978px;
         
         ul {
             margin: 0;
@@ -143,6 +144,10 @@ html {
 
         h1 {
             width: 180px;
+
+            .fas.fa-caret-up {
+                display: none;
+            }
         }
     }
 }
@@ -158,6 +163,7 @@ html {
         transform: scale(0.9); 
         opacity: 0; 
     } 
+
     50% { 
         transform: scale(1.005); 
         opacity: 0.5; 

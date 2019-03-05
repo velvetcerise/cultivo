@@ -1,9 +1,9 @@
-var count01 = 0;
+var count01 = 1;
 var count02 = 0;
 var count03 = 0;
 var count04 = 0;
 var count05 = 0;
-var sum = 0;
+var sum = 1;
 
 $('.click01').click(function() {
   count01++; // count = count +1
