@@ -8,35 +8,35 @@ var sum = 0;
 $('.click01').click(function() {
   count01++; // count = count +1
   sum++;    // sum = sum +1
-  $(this).siblings().children('.counter').html(count01);
+  $(this).children('.counter').html(count01);
   $('.totalClicks').html(sum);
 });
 
 $('.click02').click(function() {
   count02++;
   sum++;
-  $(this).siblings().children('.counter').html(count02);
+  $(this).children('.counter').html(count02);
   $('.totalClicks').html(sum);
 });
 
 $('.click03').click(function() {
     count03++;
     sum++;
-    $(this).siblings().children('.counter').html(count03);
+    $(this).children('.counter').html(count03);
     $('.totalClicks').html(sum);
   });
 
   $('.click04').click(function() {
     count04++;
     sum++;
-    $(this).siblings().children('.counter').html(count04);
+    $(this).children('.counter').html(count04);
     $('.totalClicks').html(sum);
   });
 
   $('.click05').click(function() {
     count05++;
     sum++;
-    $(this).siblings().children('.counter').html(count05);
+    $(this).children('.counter').html(count05);
     $('.totalClicks').html(sum);
   });
 
