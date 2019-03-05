@@ -74,10 +74,11 @@ body {
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+  margin: 0;
 }
-.tabs .active {
-  cursor: default;
-  background: #CBCBCB;
+.tabs ul p {
+  margin: 0;
+  padding: 0.35em;
 }
 
 .tabs ul:after, .tabs ul::before {
@@ -91,6 +92,11 @@ body {
   list-style: none;
 }
 
+.tabs .active {
+  cursor: default;
+  background: #CBCBCB;
+}
+
 @media screen and (min-width: 880px) {
   .tabs {
     margin: 0 auto;
@@ -102,7 +108,7 @@ body {
     width: 81.45555%;
     right: 0;
     top: 0;
-    padding: 15px 5em;
+    padding: 15px 4em;
     background-size: 100%;
     background-position: 100% 3%;
     animation: scale 0.55s ease-in;
@@ -115,7 +121,11 @@ body {
   }
 }
 .tabs .active + ul {
-  display: block;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 @keyframes scale {
