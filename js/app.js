@@ -1,42 +1,43 @@
-$('.tabs h1').click(function(event) {
-    event.preventDefault();
-    $(this).addClass('active');
-    $(this).siblings().removeClass('active');
-  
-    var ph = $(this).parent().height();
-    var ch = $(this).next().height();
-  
-    if (ch > ph) {
-      $(this).parent().css({
-        'min-height': ch + 'px'
-      });
-    } else {
-      $(this).parent().css({
-        'height': 'auto'
-      });
-    }
+var count01 = 0;
+var count02 = 0;
+var count03 = 0;
+var count04 = 0;
+var count05 = 0;
+var sum = 0;
+
+$('.click01').click(function() {
+  count01++;
+  sum++;
+  $(this).siblings().children('.counter').html(count01);
+  $('.totalClicks').html(sum);
+});
+
+$('.click02').click(function() {
+  count02++;
+  sum++;
+  $(this).siblings().children('.counter').html(count02);
+  $('.totalClicks').html(sum);
+});
+
+$('.click03').click(function() {
+    count03++;
+    sum++;
+    $(this).siblings().children('.counter').html(count03);
+    $('.totalClicks').html(sum);
   });
-  
-  function tabParentHeight() {
-    var ph = $('.tabs').height();
-    var ch = $('.tabs ul').height();
-    if (ch > ph) {
-      $('.tabs').css({
-        'height': ch + 'px'
-      });
-    } else {
-      $(this).parent().css({
-        'height': 'auto'
-      });
-    }
-  }
-  
-  $(window).resize(function() {
-    tabParentHeight();
+
+  $('.click04').click(function() {
+    count04++;
+    sum++;
+    $(this).siblings().children('.counter').html(count04);
+    $('.totalClicks').html(sum);
   });
-  
-  $(document).resize(function() {
-    tabParentHeight();
+
+  $('.click05').click(function() {
+    count05++;
+    sum++;
+    $(this).siblings().children('.counter').html(count05);
+    $('.totalClicks').html(sum);
   });
-  tabParentHeight();
-  
+
+
