@@ -6,8 +6,8 @@ var count05 = 0;
 var sum = 0;
 
 $('.click01').click(function() {
-  count01++;
-  sum++;
+  count01++; // count = count +1
+  sum++;    // sum = sum +1
   $(this).siblings().children('.counter').html(count01);
   $('.totalClicks').html(sum);
 });
